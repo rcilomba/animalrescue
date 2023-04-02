@@ -35,16 +35,6 @@ router.post("/animals", auth, async function(request, response, next){
     }
 })
 
-// update an animal by id -- vad jag testade att skriva utan manual
-/*router.put("/animals/:id", async function(request, response, next){
-    try {
-        let animalUpdate = await Animal.findOneAndUpdate(request.params.id)
-        return response.status(204).json(animalUpdate)
-        
-    } catch (error) {
-        return next(error)
-    }
-}) */
 
 // update an animal by id
 router.patch("/animals/:id", auth, async function(request, reponse, next){
